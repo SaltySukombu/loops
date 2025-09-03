@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estrelas</title>
+    <style>
+        body{
+            background-color: black;
+        }
+
+        .square{
+            width: 5px;
+            height: 5px;
+            margin: 5px;
+            background-color: black;
+            display: inline-block;
+        }
+        a,h1{
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html">Quadrados</a>
+    <a href="index2.html">Estrelas</a>
+    <a href="index3.html">Jogo</a>
+    <h1>estrelas no ceu</h1>
+    <div id="conteiner"></div>
+    <script>
+        const conteiner = document.getElementById("conteiner");
+
+        for(let i = 0; i <50; i++){
+            const square = document.createElement("div");
+            square.classList.add("square");
+            square.style.backgroundColor="yellow";
+            square.style.position="absolute";
+            square.style.left=`${Math.random()*window.innerWidth}px`;
+            square.style.top=`${Math.random()*window.innerHeight}px`;
+            conteiner.appendChild(square);
+        }
+    </script>
+</body>
+</html>

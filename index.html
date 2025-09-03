@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quadrados</title>
+    <style>
+        .square{
+            width: 50px;
+            height: 50px;
+            margin: 5px;
+            background-color: black;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html">Quadrados</a>
+    <a href="index2.html">Estrelas</a>
+    <a href="index3.html">Jogo</a>
+    <h1>Quadrados gerados por loops</h1>
+    <div id="conteiner"></div>
+    <script>
+        const conteiner = document.getElementById("conteiner");
+
+        for(let i = 0; i <10; i++){
+            const square = document.createElement("div");
+            square.classList.add("square");
+            conteiner.appendChild(square);
+        }
+    </script>
+</body>
+</html>
